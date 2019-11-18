@@ -292,28 +292,11 @@
 
     let typesetting = '<div>' + essay.join('</div><div>') + '</div>';
     $('#essay').innerHTML = typesetting;
-    getImage();
   }
   // 获取网址参数
   if (getUrlP('theme')) {
     getEssay();
     gtag('event', 'shared', { 'event_label': theme, 'seed': anyseed, 'title_seed': theme + '_' + anyseed });
-  }
-  function getImage() {
-    let word = theme;
-    let url = "http://image.baidu.com/search/index?tn=baiduimage&word=" + word;
-    jQuery.noConflict();
-    jQuery.ajax({
-      type: "get",
-      url: url,
-      dataType: "json",
-      success: function (data) {
-        console.log(data);
-      },
-      error: function (e) {
-        console.log(e);
-      }
-    });
   }
 </script>
 <style>
