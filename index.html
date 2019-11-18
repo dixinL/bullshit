@@ -34,14 +34,7 @@
 
 <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-BM8WXEWW3P');
 
-  window.$ = function (selector) {
-    return document.querySelector(selector);
-  }
   // 获取网址参数
   function getUrlP(value) {
     return new URL(window.location.href).searchParams.get(value)
