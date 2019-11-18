@@ -301,7 +301,7 @@
   }
   function getImage() {
     let word = theme;
-    let url = "http://soso.nipic.com/Home/getRecommend?page=1&q=" + word + "&isVip=false";
+    let url = "https://image.baidu.com/search/acjson?tn=resultjson_com&ipn=rj&rn=60&pn=0&word=" + word;
     jQuery.noConflict();
     jQuery.ajax({
       type: "get",
