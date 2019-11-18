@@ -289,7 +289,7 @@
     }
     paragraph = addP(paragraph);
     essay.push(paragraph);
-    getImage();
+//     getImage();
     let typesetting = '<div>' + essay.join('</div><div>') + '</div>';
     $('#essay').innerHTML = typesetting;
   }
@@ -298,23 +298,24 @@
     getEssay();
     gtag('event', 'shared', { 'event_label': theme, 'seed': anyseed, 'title_seed': theme + '_' + anyseed });
   }
-  function getImage() {
-    let word = theme;
-    let url = "https://image.baidu.com/search/acjson?tn=resultjson_com&ipn=rj&rn=60&word="+word+"&pn=0"
-    jQuery.noConflict();
-    jQuery.ajax({
-      type: "get",
-      url: url,
-      contentType: 'application/x-www-form-urlencoded;charset=utf-8',  
-      dataType: "json",
-      success: function (data) {
-        console.log(data);
-      },
-      error: function (e) {
-        console.log(e);
-      }
-    });
-  }
+//   图片拿不到了，跨域，且github必须https传输
+//   function getImage() {
+//     let word = theme;
+//     let url = "https://image.baidu.com/search/acjson?tn=resultjson_com&ipn=rj&rn=60&word="+word+"&pn=0"
+//     jQuery.noConflict();
+//     jQuery.ajax({
+//       type: "get",
+//       url: url,
+//       contentType: 'application/x-www-form-urlencoded;charset=utf-8',  
+//       dataType: "json",
+//       success: function (data) {
+//         console.log(data);
+//       },
+//       error: function (e) {
+//         console.log(e);
+//       }
+//     });
+//   }
 </script>
 <style>
   @media screen and (max-width: 1024px) {
